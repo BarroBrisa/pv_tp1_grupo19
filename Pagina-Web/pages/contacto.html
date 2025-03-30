@@ -18,17 +18,17 @@
     <ul>
       <li>
         <a href="../index.html">
-          <img src="../public/svg/init.svg" alt="icono de inicio"> Inicio
+          <img src="../public/svg/init.svg" alt="icono de inicio">Inicio
         </a>
       </li>
       <li>
         <a href="./museos.html">
-          <img src="../public/svg/museo.svg" alt="icono de museo"> Museos
+          <img src="../public/svg/museo.svg" alt="icono de museo">Museos
         </a>
       </li>
       <li>
         <a href="./contacto.html">
-          <img src="../public/svg/contacto.svg" alt="icono de contacto"> Contacto
+          <img src="../public/svg/contacto.svg" alt="icono de contacto">Contacto
         </a>
       </li>
     </ul>
@@ -46,16 +46,22 @@
       <label for="lastname">Apellido:</label>
       <input type="text" id="lastname" name="lastname" placeholder="Ingresa tu apellido..." required>
 
+      <label for="age">Edad:</label>
+      <input type="number" min="18" placeholder="Ingrese su edad..." required>
+
       <label for="email">Correo:</label>
       <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+
     </fieldset>
 
     <fieldset>
       <legend>Solicitud</legend>
       <label for="solicitud">Mensaje:</label>
-      <textarea id="solicitud" name="solicitud" placeholder="Escribe tu solicitud aquí..." required></textarea>
+      <textarea id="solicitud" name="solicitud" placeholder="Escribe tu solicitud aquí..." minlength="20"
+        required></textarea>
     </fieldset>
 
+    <p>Al presion enviar usted acepta todo <a href="#">los terminos condiciones</a></p>
     <button type="submit">Enviar</button>
   </form>
 
