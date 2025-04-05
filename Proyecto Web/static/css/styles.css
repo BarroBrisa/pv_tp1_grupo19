@@ -20,14 +20,15 @@ nav{
     font-style: oblique;
     border-style: double;
 }
-#list1{
+ul #list1{
     display:-ms-inline-flexbox; 
     width: 700px;
     padding: 10px 150px; /* Espacio interior */
     margin: 5px; /* Espacio exterior entre botones */
     background-color:red; /* Color de fondo */
-    color: lightgreen; /* Color de texto */
+    color: black; /* Color de texto */
     border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none;
 }
 #list1 li{
     display: inline-block;
