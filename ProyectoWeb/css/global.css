@@ -1,0 +1,43 @@
+:root {
+  /* Paleta de colores */
+  --font-color: rgb(251, 251, 254);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.layout {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  /* header - main - footer */
+}
+
+.header_container {
+  background-color: greenyellow;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.nav_container {
+  color: var(--font-color);
+
+  .nav_container_item {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
