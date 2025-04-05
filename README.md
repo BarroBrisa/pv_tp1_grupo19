@@ -7,11 +7,11 @@ GRUPO 19
 
 INTEGRANTES:
 
-- BRISA ANAHÍ BARRO [GitHub](url)
-- DARIO ABEL MARTINEZ [GitHub](url)
-- MARCELO FERNANDO ORTIZ [GitHub](url)
-- GIANFRANCO PEDRAZZANI [GitHub](url)
-- MATÍAS EMANUEL VARGAS [GitHub](url)
+- BRISA ANAHÍ BARRO [GitHub](https://github.com/BarroBrisa)
+- DARIO ABEL MARTINEZ [GitHub](https://github.com/martinezcabj12)
+- MARCELO FERNANDO ORTIZ [GitHub](https://github.com/marceortiz)
+- GIANFRANCO PEDRAZZANI [GitHub](https://github.com/GianPedr)
+- MATÍAS EMANUEL VARGAS [GitHub](https://github.com/MatiasVargasDev)
 
 ---
 
