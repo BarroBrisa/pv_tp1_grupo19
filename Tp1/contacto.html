@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicio al cliente</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>    
@@ -12,24 +13,24 @@
     <h2>Contacto</h2>
     <form action="#" method="POST">
         <!-- nombre -->
-        <label for="nombre">Nombre:</label>
+        <label class="datos-user" for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre" required><br><br>
         
         <!-- email -->
-        <label for="email">Correo electornico:</label>
+        <label class="datos-user" for="email">Correo electornico:</label>
         <input type="text" id="email" name="email" required><br><br>
 
         <!-- mensaje -->
-        <label for="mensaje">Mensaje:</label>
+        <label class="datos-user" for="mensaje">Mensaje:</label>
         <textarea id="mensaje" name="mensaje" rows="5" required></textarea><br><br>
 
         <!-- boton de enviar -->
-        <button type="submit">Enviar</button>
+        <button id="sent-button" type="submit">Enviar</button>
     </form>
 
 
     <footer>
-        <p> 2025 - Comunicacion</p> 
+        <p> 2025 - company_name Comunicacion</p> 
     </footer>
 </body>
 </html>

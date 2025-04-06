@@ -1,0 +1,35 @@
+header{
+    background-color: #0c0921;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+#sent-button{
+    background-color: #0c0921;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+/* Cambia el color de fondo al pasar el mouse */
+#sent-button:hover{   
+    background-color: #29234d;
+    transition: background-color 0.3s ease;
+}
+.datos-user{
+    display: flex;
+    justify-content: space-between;
+    color: #333;
+}
+
+footer{
+    background-color: #0c0921;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
