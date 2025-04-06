@@ -1,11 +1,3 @@
-/* textarea { */
-/*   resize: none; */
-/*   min-height: 36px; */
-/*   width: 250px; */
-/*   /* browser chrome, edge, opera*/
-/*   form-sizing: content; */
-/* } */
-
 .form-container {
   max-width: 600px;
   margin: 40px auto;
@@ -73,9 +65,7 @@ form a:hover {
 button {
   height: auto;
   margin: 10px auto;
-  /* centra horizontalmente */
   display: block;
-  /* necesario para que margin auto funcione */
 }
 
 button[type="submit"] {
