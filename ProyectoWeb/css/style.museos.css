@@ -22,7 +22,9 @@
   }
 
   .ubication {
-    color: #ccc;
+    color: #777;
+    padding: 15px;
+    text-align: center;
   }
 
   .desc {
