@@ -13,34 +13,32 @@ body {
     background-position: center;
     background-size: 970px;
 }
-nav{
-    display:flexbox;
-    color: darkblue;
-    background-color: olive;
-    font-style: oblique;
-    border-style: double;
+h1{
+    padding: 5px;
+    margin: 15px;
 }
-ul #list1{
-    display:-ms-inline-flexbox; 
-    width: 700px;
-    padding: 10px 150px; /* Espacio interior */
-    margin: 5px; /* Espacio exterior entre botones */
-    background-color:red; /* Color de fondo */
-    color: black; /* Color de texto */
-    border-radius: 5px; /* Bordes redondeados */
+.menu1{
+    padding: 10px 20px;
+}
+
+.menu1 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 15px; /* Espacio uniforme entre botones */
+    justify-content: center; /* Centrado opcional */
+    align-items: center;
+}
+.menu1 a {
     text-decoration: none;
-}
-#list1 li{
-    display: inline-block;
-    padding: 1px 65px;
-    margin: 10px;
-    color: orange;
-    text-align: center;
-    border-style:solid;
-    font-size: 20px;
-}
-a{
-    color:whitesmoke;
+    color: white;
+    font-weight: 500;
+    padding: 10px 18px;
+    background-color:olive;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 #linkMuseos{
     display: flex;
