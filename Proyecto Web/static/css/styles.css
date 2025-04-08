@@ -11,7 +11,7 @@ body {
     background-color:darkgreen; /* Color de fondo opcional */
     background-image: url(../images/fondo7colores.jpg);
     background-position: center;
-    background-size: 970px;
+    background-size: auto;
 }
 h1{
     padding: 5px;
