@@ -16,6 +16,8 @@ body {
 h1{
     padding: 5px;
     margin: 15px;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .menu1{
     padding: 10px 20px;
@@ -41,23 +43,35 @@ h1{
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 #linkMuseos{
-    display: flex;
+    display: flexbox;
+    align-items: center;
 }
+.Titulo{
+    text-align: center;
+    background-color: olive;
+    color: whitesmoke;
+    padding: 5px;
+    margin: 15px;
+    width: 350px;
+    font-style: oblique;
 
+
+}
+.museoslist{
+    display:flexbox;
+
+}
+.secMuseos{
+    color: dark;
+}
 .fondform{
     background-image: url(../images/fonfoform.jpeg);
     background-position: center;tr4
     width: 5px;
     
-
-  
 }
 
-}
-h1{
-    text-align: center;
-    font-size: 25px;
-}
+
 h2, h3{
     text-align: center;
     font-size: 25px;
@@ -86,9 +100,9 @@ hr{
     margin: 20px 0px;
 }
 footer {
-    background-color:navy;
-    color: white;
+    color: whitesmoke;
     text-align: center;
     padding: 10px;
     margin-top: 50px/* Empuja el footer hacia abajo */
+
 }
