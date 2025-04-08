@@ -8,6 +8,7 @@
   <link href="../css/global.css" rel="stylesheet">
   <link href="../css/style.contacto.css" rel="stylesheet">
   <link rel="icon" href="../public/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 
 <body>
@@ -27,7 +28,7 @@
     <main>
 
       <!-- Formulario de Contacto -->
-      <section class="form-container">
+      <div class="form-container">
         <form class="form-container-item" action="" method="">
           <fieldset>
             <legend>Formulario de Contacto</legend>
@@ -94,20 +95,43 @@
             <button type="submit" id="enviar" disabled>Enviar</button>
           </fieldset>
         </form>
-  </div>
+      </div>
 
-  </main>
-  <footer>
-    <p>Copyright (c) 2025 Author. All Rights Reserved.</p>
-  </footer>
-  <script>
-    const checkbox = document.getElementById('terminos');
-    const boton = document.getElementById('enviar');
+    </main>
+    <footer class="footer">
+      <div class="footer__social">
+        <hr class="footer__line" />
+        <div class="footer__icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <hr class="footer__line" />
+      </div>
 
-    checkbox.addEventListener('change', () => {
-      boton.disabled = !checkbox.checked;
-    });
-  </script>
+      <div class="footer__logo">
+        <p class="footer__brand">Cultura de Jujuy</p>
+        <small>Copyright (c) 2025 Author. All Rights Reserved.</small>
+      </div>
+
+      <div class="footer__links">
+        <a href="#">Información legal</a>
+        <span>|</span>
+        <a href="#">Política de privacidad</a>
+      </div>
+    </footer>
+
+    <script>
+      const checkbox = document.getElementById('terminos');
+      const boton = document.getElementById('enviar');
+
+      checkbox.addEventListener('change', () => {
+        boton.disabled = !checkbox.checked;
+      });
+    </script>
+
   </div>
 </body>
 
