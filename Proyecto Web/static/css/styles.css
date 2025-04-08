@@ -44,6 +44,16 @@ h1{
     display: flex;
 }
 
+.fondform{
+    background-image: url(../images/fonfoform.jpeg);
+    background-position: center;tr4
+    width: 5px;
+    
+
+  
+}
+
+}
 h1{
     text-align: center;
     font-size: 25px;
@@ -75,8 +85,10 @@ hr{
     box-shadow: 0 2px 5px rgba(red, green, blue, alpha);
     margin: 20px 0px;
 }
-footer{
-    font-size: 25px;
-    color: chartreuse;
-
+footer {
+    background-color:navy;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 50px/* Empuja el footer hacia abajo */
 }
