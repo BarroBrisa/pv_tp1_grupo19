@@ -1,0 +1,98 @@
+/* --- CONTENEDOR GENERAL --- */
+.main_content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Artículo Principal */
+.article {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Título principal del artículo */
+.article_titulo {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #C70039;
+}
+
+/* Títulos de cada sección (alineados a la izquierda) */
+.section_titulo {
+  font-size: 2.1rem;
+  margin-top: 20px;
+  color: #900C3F;
+  text-align: left;   /* Asegura que el título se alinee a la izquierda */
+}
+
+/* Párrafos o descripción de cada sección */
+.section_texto {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: left;   /* Alinea el texto a la izquierda */
+}
+
+/* Cada sección se muestra como contenedor de dos columnas:
+   - Una para el texto (título y párrafo).
+   - Otra para la imagen. */
+.section {
+  display: flex;
+  align-items: center;           /* Alinea verticalmente ambos contenedores */
+  justify-content: space-between;/* Separa el contenido a los extremos */
+  margin-bottom: 30px;
+}
+
+/* Contenedor del contenido textual de la sección */
+.section_content {
+  flex: 1;                       /* Toma todo el espacio disponible */
+  padding-right: 20px;           /* Espacio a la derecha para separar del contenedor de imagen */
+  text-align: left;              /* Asegura que el contenido se alinee a la izquierda */
+}
+
+/* Contenedor de la imagen de la sección */
+.section_image {
+  flex: 1;                       /* Ocupa espacio proporcional */
+  text-align: right;             /* Alinea la imagen a la derecha */
+}
+
+/* Estilos para la imagen, para que se ajuste bien al contenedor */
+.section_image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Media Query para pantallas menores a 768px:
+   Aquí cambiamos la disposición para que el contenido se muestre en columna. */
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;      /* Coloca primero el texto y luego la imagen */
+  }
+  
+  .section_content {
+    padding-right: 0;
+    margin-bottom: 20px;         /* Separa verticalmente texto e imagen */
+  }
+  
+  .section_image {
+    text-align: center;          /* Centra la imagen en pantallas pequeñas */
+  }
+}
+
+.section_links {
+  margin-top: 40px;  /* por arriba */
+  padding-top: 20px; /* espacio por adentro top */
+  border-top: 1px solid #ddd; /* Línea separadora para distinguir la sección */
+}
+
+.section_links ol {
+  padding-left: 20px; /* sangria */
+}
+
+.section_links li {
+  margin-bottom: 10px; /* espacio entre cada link */
+}
