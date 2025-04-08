@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Museo</title>
+    <link rel="stylesheet" href="css/allpages.css"> <!--link a un css externo-->
     <!-- Estilo CSS interno -->
+     <!--
     <style>
-        body {
+        /* no se hace ! el combinar lenguajes es mejor con un link modularizar */
+        /*
+        body{
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #fdfdfd;
         }
+        */
+        /*
         header {
             background-color: #e3f2fd;
             text-align: center;
             padding: 20px 0;
         }
+        */
         h1{
             color: #0d47a1;
         }
@@ -44,13 +51,32 @@
             color: #555;
         }
     </style>
+    -->
 </head>
 <body>
+
     <header>
-        <h1>Los 3 Museos mas famos del mundo.</h1>
+        <nav class="barra__superior"> <!-- barra de navegacion superior-->
+            <div class="logo"> <!-- logo de la pagina -->
+                <img src="Image/japon2.png" alt="Logo de Japon" width="100px" height="70px"> <!-- logo de la pagina -->
+                <!-- display: block; + maring 0 auto; centrar imagen  -->
+            </div>
+            <div class="titulo"> <!-- titulo de la pagina -->
+                <h1>Japon un lugar para visitar</h1><!--siempre estara mi titulo-->
+
+            </div>
+        </nav>
+        <nav class="page__nav"> <!-- barra de navegacion inferior-->
+                <ul>
+                    <li><a href="index.html" style="color: white;">Inicio</a></li>
+                    <li> <a href="museo.html" style="color: white;">Museo</a> </li>
+                    <li> <a href="contacto.html" style="color: white;">Contacto</a> </li>
+                </ul>
+        </nav>
     </header>
-
-
+    
+    <h1>Los 3 Museos mas famos del mundo.</h1>
+    
     <section>
         <h2>1. Museo del Louvre, París, Francia</h2>
         <p>
@@ -99,8 +125,8 @@
 
     </section>
 
-    <footer>    
-        <p> 2025 - Politicas de privacidad</p>
+    <footer>
+        <p> 2025 - company_name Comunicacion</p> 
     </footer>
     
 </body>

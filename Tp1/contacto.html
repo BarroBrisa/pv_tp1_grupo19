@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> <!-- conjunto de caracteres-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicio al cliente</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/allpages.css"> <!--link a un css externo-->
 </head>
 <body>
-    <header>    
-        <h1>Envianos un mensaje</h1>
+    <header>
+        <nav class="barra__superior"> <!-- barra de navegacion superior-->
+            <div class="logo"> <!-- logo de la pagina -->
+                <img src="Image/japon2.png" alt="Logo de Japon" width="100px" height="70px"> <!-- logo de la pagina -->
+                <!-- display: block; + maring 0 auto; centrar imagen  -->
+            </div>
+            <div class="titulo"> <!-- titulo de la pagina -->
+                <h1>Japon un lugar para visitar</h1><!--siempre estara mi titulo-->
+
+            </div>
+        </nav>
+        <nav class="page__nav"> <!-- barra de navegacion inferior-->
+                <ul>
+                    <li><a href="index.html" style="color: white;">Inicio</a></li>
+                    <li> <a href="museo.html" style="color: white;">Museo</a> </li>
+                    <li> <a href="contacto.html" style="color: white;">Contacto</a> </li>
+                </ul>
+        </nav>
     </header>
-    <h2>Contacto</h2>
+    
+    <h1>Contacto</h1>
     <form action="#" method="POST">
         <!-- nombre -->
         <label class="datos-user" for="nombre">Nombre:</label>
