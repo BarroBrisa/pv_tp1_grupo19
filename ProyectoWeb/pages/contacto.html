@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto</title>
+  <link href="../css/global.css" rel="stylesheet">
+  <link href="../css/style.contacto.css" rel="stylesheet">
+  <link rel="icon" href="../public/favicon.svg" type="image/svg+xml">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="layout">
+    <header class="header_container">
+      <div class="header_container_logo">
+      </div>
+      <h1>Cultura de Jujuy</h1>
+      <nav class="nav_container">
+        <ul class="nav_container_item">
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="../pages/museos.html">Museos</a></li>
+          <li><a href="../pages/contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+
+      <!-- Formulario de Contacto -->
+      <section class="form-container">
+        <form class="form-container-item" action="" method="">
+          <fieldset>
+            <legend>Formulario de Contacto</legend>
+
+            <label for="first-name">Nombre:</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Tu nombre"
+              pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ\s]+" minlength="2" maxlength="40" required>
+
+            <label for="last-name">Apellido:</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Tu apellido"
+              pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ\s]+" minlength="2" maxlength="40" required>
+
+            <label for="age">Edad:</label>
+            <input type="number" id="age" name="age" min="12" max="50" required>
+
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="mail" placeholder="Ej: ejemplo@correo.com..." required>
+
+            <label for="provincia">Provincia:</label>
+            <input list="provincias" id="provincia" name="provincia"
+              pattern="Buenos Aires|Catamarca|Chaco|Chubut|Córdoba|Corrientes|Entre Ríos|Formosa|Jujuy|La Pampa|La Rioja|Mendoza|Misiones|Neuquén|Río Negro|Salta|San Juan|San Luis|Santa Cruz|Santa Fe|Santiago del Estero|Tierra del Fuego|Tucumán"
+              placeholder="Ej: Córdoba" required>
+
+            <datalist id="provincias">
+              <option value="Buenos Aires">
+              <option value="Catamarca">
+              <option value="Chaco">
+              <option value="Chubut">
+              <option value="Córdoba">
+              <option value="Corrientes">
+              <option value="Entre Ríos">
+              <option value="Formosa">
+              <option value="Jujuy">
+              <option value="La Pampa">
+              <option value="La Rioja">
+              <option value="Mendoza">
+              <option value="Misiones">
+              <option value="Neuquén">
+              <option value="Río Negro">
+              <option value="Salta">
+              <option value="San Juan">
+              <option value="San Luis">
+              <option value="Santa Cruz">
+              <option value="Santa Fe">
+              <option value="Santiago del Estero">
+              <option value="Tierra del Fuego">
+              <option value="Tucumán">
+            </datalist>
+
+            <label for="tipoConsulta">Tipo de consulta:</label>
+            <select id="tipoConsulta" name="tipoConsulta" required>
+              <option value="">-- Seleccioná un tipo --</option>
+              <option value="general">Consulta general</option>
+              <option value="tecnica">Consulta técnica</option>
+              <option value="ventas">Revisión de datos</option>
+              <option value="reclamos">Reclamos</option>
+            </select>
+            <label for="consulta">Consulta:</label>
+            <textarea name="consulta" id="consulta" placeholder="Escribir consulta"></textarea>
+            <label class="terminos-check">
+              <input class="input-check" name="terminos" type="checkbox" id="terminos" required>
+              Aceptar los <a href="#">términos y condiciones</a>
+            </label>
+            <button type="submit" id="enviar" disabled>Enviar</button>
+          </fieldset>
+        </form>
+  </div>
+
+  </main>
+  <footer>
+    <p>Copyright (c) 2025 Author. All Rights Reserved.</p>
+  </footer>
+  <script>
+    const checkbox = document.getElementById('terminos');
+    const boton = document.getElementById('enviar');
+
+    checkbox.addEventListener('change', () => {
+      boton.disabled = !checkbox.checked;
+    });
+  </script>
+  </div>
+</body>
+
+</html>

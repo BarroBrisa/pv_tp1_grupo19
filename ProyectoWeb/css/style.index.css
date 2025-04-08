@@ -1,0 +1,39 @@
+/* --- CONTENEDOR GENERAL --- */
+.main_content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+  
+/* --- ARTÍCULO PRINCIPAL --- */
+.article {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+  
+/* titulos */
+.article_titulo {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #C70039;
+}
+  
+.section_titulo {
+  font-size: 2.5rem;
+  margin-top: 30px;
+  color: #900C3F;
+}
+  
+/* parrafos */
+.section_texto {
+  font-size: 2rem;
+  line-height: 1.6;
+  color: #333;
+}
+  
+/* secion */
+.section {
+  margin-bottom: 30px;
+}
