@@ -23,86 +23,148 @@
             </li>       
         </ul>
     </nav>
-    <section class="secMuseos">
         <h1 id="texttitulo">Lista de Museos de Jujuy<br>(hacer click en la imagen para acceder a la pagína del museo)</h1>
-        <ol class="museoslist">
-            <li>
-                <h2>Cabildo </h2>
-                <a id="linkMuseos" href="https://www.turismo.jujuy.gob.ar/item/cabildo-de-jujuy/" target="_blank">
-                <img src="static/images/cabildo.png" alt="museo cabildo" width="700px">
-                </a> <br>
-                <br>
-                <strong>Dirección: Gral. Belgrano 493, San Salvador de Jujuy</strong>
-            </li>
-            <hr>
-            <li>
-                <h2>Centro de Interpretación de la Bandera Nacional de la Libertad Civil y Experiencia Éxodo</h2>
-                <a id="linkMuseos" href="https://www.turismo.jujuy.gob.ar/item/centro-de-interpretacion-de-la-bandera-nacional-de-la-libertad-civil-y-experiencia-exodo/"
-                target="_blank">
-                <img src="static/images/museo2.jpg" alt="museo2" width="700px"></a><br>
-                <br>
-                <strong>Dirección: General San Martín 450, San Salvador de Jujuy</strong>
-            </li>
-            <hr>
-            <li>
-                <h2>Estatuas de Lola Mora </h2>
-                 <a id="linkMuseos" href="https://www.turismo.jujuy.gob.ar/item/estatuas-de-lola-mora/"
-                 target="_blank">
-                <img src="static/images/museo3.png" alt="lolamora" width="700px"></a>
-                <br>
-                <strong>Dirección: General San Martín 450, San Salvador de Jujuy </strong>
-             </li>
-             <hr>
-             <li>
-                <h2>Museo Arqueológico Eduardo Casanova</h2>
-                <a id="linkMuseos" href="https://www.turismo.jujuy.gob.ar/item/museo-arqueologico-eduardo-casanova/">
-               <img src="static/images/museo4.png" alt="museo arqueologico" width="700px"></a>
-               <br>
-               <strong>Dirección: Belgrano 445, Tilcara</strong>
-            </li>
-            <hr>
-            <li>
-                <h2>Museo de Arte Sacro San Francisco</h2>
-                <a id="linkMuseos" href="https://www.turismo.jujuy.gob.ar/item/museo-de-arte-sacro-san-francisco/">
-                <img src="static/images/museo5.png" alt="museo san francisco" width="700px"></a>
-                <br>
-                <strong>Dirección: Belgrano 677, San Salvador de Jujuy</strong>
-            </li>
-            <hr>
-            <li>
-                <h2>Museo de las Ermitas</h2>
-                <a id="linkMuseos" href="https://www.turismo.jujuy.gob.ar/item/museo-de-ermitas/">
-                <img src="static/images/museo6.jpg" alt="museo de las ermitas" width="700px"></a>
-                <br>
-                <strong>Dirección: Rivadavia, entre Jujuy y Ambrosetti, Tilcara</strong>
-            </li>
-            <hr>
-            <li>
-                <h2>Museo Histórico Provincial Juan Galo Lavalle</h2>
-                <a id="linkMuseos" href="https://www.turismo.jujuy.gob.ar/item/museo-historico-provincial/">
-                <img src="static/images/museo7.jpg" alt="museo lavalle" width="700px"></a>
-                <br>
-                <strong>Dirección: Lavalle 256, San Salvador de Jujuy</strong>
-            </li>
-            <hr>
-            <li>
-                <h2>Museo Posta de Hornillos</h2>
-                <a id="linkMuseos" href="https://www.turismo.jujuy.gob.ar/item/museo-posta-de-hornillos/">
-                <img src="static/images/museo8.png" alt="museo hornillos" width="700px"></a>
-                <br>
-                <strong>Dirección:RN9 a 10km de Tilcara</strong>
-            </li>
-            <hr>
-            <li>
-                <h2>Museo Soto Avedaño</h2>
-                <a id="linkMuseos" href="https://www.turismo.jujuy.gob.ar/item/museo-soto-avedano/">
-                <img src="static/images/museo9.jpg" alt="museo soto avendaño" width="700px"></a>
-                <br>
-                <strong>Dirección: Belgrano s/n, Tilcara </strong>
-            </li>
-            <hr>                       
-        </ol>
-    </section>
+        <div id="conteItems">
+            <div class="itemCarrousel" id="item1">
+                <div class="targetaCarrousel"  id="museo1">
+                    <h2>Cabildo </h2>
+                        <a id="linkMuseos" href="https://www.turismo.jujuy.gob.ar/item/cabildo-de-jujuy/" target="_blank">
+                        <img src="static/images/cabildo.png" alt="museo cabildo" >
+                        </a>
+                        <strong>Dirección: Gral. Belgrano 493, San Salvador de Jujuy</strong>
+                </div>
+                <div class="flechasCarrousel">
+                    <a href="#item9">
+                        I
+                    </a>
+                    <a href="#item2">
+                        D
+                    </a>
+                </div>
+            <div class="itemCarrousel" id="item2">
+                <div class="targetaCarrousel"  id="museo2">
+                    <h2>Centro de Interpretación de la Bandera Nacional de la Libertad Civil y Experiencia Éxodo</h2>
+                        <a id="linkMuseos" href="https://www.turismo.jujuy.gob.ar/item/centro-de-interpretacion-de-la-bandera-nacional-de-la-libertad-civil-y-experiencia-exodo/"
+                        target="_blank">
+                        <img src="static/images/museo2.jpg" alt="museo2" width="700px"></a>
+                        <strong>Dirección: General San Martín 450, San Salvador de Jujuy</strong>
+                </div>
+                <div class="flechasCarrousel">
+                    <a href="#item1">
+                        I
+                    </a>
+                    <a href="#item3">
+                        D
+                    </a>
+                </div>
+            </div>
+            <div class="itemCarrousel" id="item3">
+                <div class="targetaCarrousel"  id="museo3">
+                    <h2>Estatuas de Lola Mora </h2>
+                        <a id="linkMuseos" href="https://www.turismo.jujuy.gob.ar/item/estatuas-de-lola-mora/"
+                        target="_blank">
+                        <img src="static/images/museo3.png" alt="lolamora" width="700px"></a>
+                        <strong>Dirección: General San Martín 450, San Salvador de Jujuy </strong>
+                </div>
+                <div class="flechasCarrousel">
+                    <a href="#item2">
+                        <img src="static/images/flechaIzq.png">
+                    </a>
+                    <a href="#item4">
+                        <img src="static/images/flechaDerecha.png">
+                    </a>
+            </div>
+            <div class="itemCarrousel" id="item4">
+                <div class="targetaCarrousel"  id="museo4">
+                    <h2>Museo Arqueológico Eduardo Casanova</h2>
+                        <a id="linkMuseos" href="https://www.turismo.jujuy.gob.ar/item/museo-arqueologico-eduardo-casanova/">
+                        <img src="static/images/museo4.png" alt="museo arqueologico" width="700px"></a>
+                        <strong>Dirección: Belgrano 445, Tilcara</strong>
+                </div>
+                <div class="flechasCarrousel">
+                    <a href="#item4">
+                        <img src="static/images/flechaIzq.png">
+                    </a>
+                    <a href="#item6">
+                        <img src="static/images/flechaDerecha.png">
+                    </a>
+            </div>
+            <div class="itemCarrousel" id="item5">
+                <div class="targetaCarrousel"  id="museo5">
+                    <h2>Museo de Arte Sacro San Francisco</h2>
+                        <a id="linkMuseos" href="https://www.turismo.jujuy.gob.ar/item/museo-de-arte-sacro-san-francisco/">
+                        <img src="static/images/museo5.png" alt="museo san francisco" width="700px"></a>
+                        <strong>Dirección: Belgrano 677, San Salvador de Jujuy</strong> 
+                </div>
+                <div class="flechasCarrousel">
+                    <a href="#item5">
+                        <img src="static/images/flechaIzq.png">
+                    </a>
+                    <a href="#item7">
+                        <img src="static/images/flechaDerecha.png">
+                    </a>
+            </div>
+            <div class="itemCarrousel" id="item6">
+                <div class="targetaCarrousel"  id="museo6">
+                    <h2>Museo de las Ermitas</h2>
+                    <a id="linkMuseos" href="https://www.turismo.jujuy.gob.ar/item/museo-de-ermitas/">
+                    <img src="static/images/museo6.jpg" alt="museo de las ermitas" width="700px"></a>
+                    <strong>Dirección: Rivadavia, entre Jujuy y Ambrosetti, Tilcara</strong>
+                </div>
+                <div class="flechasCarrousel">
+                    <a href="#item6">
+                        <img src="static/images/flechaIzq.png">
+                    </a>
+                    <a href="#item8">
+                        <img src="static/images/flechaDerecha.png">
+                    </a>
+            </div>
+            <div class="itemCarrousel" id="item7">
+                <div class="targetaCarrousel"  id="museo7">
+                    <h2>Museo Histórico Provincial Juan Galo Lavalle</h2>
+                    <a id="linkMuseos" href="https://www.turismo.jujuy.gob.ar/item/museo-historico-provincial/">
+                    <img src="static/images/museo7.jpg" alt="museo lavalle" width="700px"></a>
+                    <strong>Dirección: Lavalle 256, San Salvador de Jujuy</strong>
+                </div>
+                <div class="flechasCarrousel">
+                    <a href="#item7">
+                        <img src="static/images/flechaIzq.png">
+                    </a>
+                    <a href="#item9">
+                        <img src="static/images/flechaDerecha.png">
+                    </a>
+            </div>
+            <div class="itemCarrousel" id="item8">
+                <div class="targetaCarrousel"  id="museo8">
+                    <h2>Museo Posta de Hornillos</h2>
+                    <a id="linkMuseos" href="https://www.turismo.jujuy.gob.ar/item/museo-posta-de-hornillos/">
+                    <img src="static/images/museo8.png" alt="museo hornillos" width="700px"></a>
+                    <strong>Dirección:RN9 a 10km de Tilcara</strong>
+                </div>
+                <div class="flechasCarrousel">
+                    <a href="#item8">
+                        <img src="static/images/flechaIzq.png">
+                    </a>
+                    <a href="#item1">
+                        <img src="static/images/flechaDerecha.png">
+                    </a>
+            </div>
+            <div class="itemCarrousel" id="item9">
+                <div class="targetaCarrousel"  id="museo9">
+                    <h2>Museo Soto Avedaño</h2>
+                    <a id="linkMuseos" href="https://www.turismo.jujuy.gob.ar/item/museo-soto-avedano/">
+                    <img src="static/images/museo9.jpg" alt="museo soto avendaño" width="700px"></a>
+                    <strong>Dirección: Belgrano s/n, Tilcara </strong>
+                </div>
+                <div class="flechasCarrousel">
+                    <a href="#item9">
+                        <img src="static/images/flechaIzq.png">
+                    </a>
+                    <a href="#item2">
+                        <img src="static/images/flechaDerecha.png">
+                    </a>
+            </div>
+        </div>
     <footer>© 2025 Cultura de Jujuy. Todos los derechos reservados.
         <hr>
         <a class="botonfooter" href="#top"><img src="static/images/flecha.png" width="50px"></a>
