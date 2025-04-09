@@ -1,6 +1,7 @@
 *{
-    margin: auto;
+    margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body {
@@ -10,8 +11,8 @@ body {
     flex-direction: column; /* Coloca los elementos uno bajo el otro */
     background-color:darkgreen; /* Color de fondo opcional */
     background-image: url(../images/fondo7colores.jpg);
-    background-position: center;
-    background-size: auto;
+    background-position:center;
+    background-attachment: fixed;
 }
 h1{
     padding: 5px;
@@ -42,9 +43,17 @@ h1{
     transition: background-color 0.3s, transform 0.2s;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+.sect{
+    background-color: lightgreen;
+    display: flexbox;
+    align-items: center;  
+    margin: 10px 100px;
+    border-style:solid;
+}
 #linkMuseos{
     display: flexbox;
     align-items: center;
+    
 }
 .Titulo{
     text-align: center;
@@ -54,19 +63,17 @@ h1{
     margin: 15px;
     width: 350px;
     font-style: oblique;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 
 
 }
 #texttitulo {
     text-align: center;
 }
-.museoslist{
-    display:flexbox;
 
-}
-.secMuseos{
-    color: dark;
-}
+
 .fondform{
     background-image: url(../images/fonfoform.jpeg);
     background-position: center;tr4
@@ -74,18 +81,6 @@ h1{
     
 }
 
-
-h2, h3{
-    text-align: center;
-    font-size: 25px;
-}
-section{
-    background-color: lightgreen;
-    display: flexbox;
-    align-items: center;  
-    margin: 10px 100px;
-    border-style:solid;
-}
 p{
     font-size: 25px;
 }
@@ -107,5 +102,33 @@ footer {
     text-align: center;
     padding: 10px;
     margin-top: 50px/* Empuja el footer hacia abajo */
+
+}
+#conteItems{
+    height: 200px;
+    overflow: hidden;
+    border: 10px solid black;
+
+}
+.itemCarrousel{
+    height: 200px;
+    position: relative;
+}
+.targetaCarrousel{
+    height: 100%;
+    margin: 0px;
+    
+}
+.flechasCarrousel{
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:20px;
+}
+
+#linkmuseos{
+    height: 100%;
 
 }
