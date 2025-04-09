@@ -57,6 +57,9 @@ h1{
 
 
 }
+#texttitulo {
+    text-align: center;
+}
 .museoslist{
     display:flexbox;
 
