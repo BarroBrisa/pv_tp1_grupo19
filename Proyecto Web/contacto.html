@@ -23,24 +23,86 @@
             </li>       
         </ul>
     </nav>
-        <fieldset class="fondform">
-            <legend>Formulario de Contacto</legend>
-            <form action="#" method="post">
-                <h2>Contacto</h2>
-                <label for="nombre">Nombre:</label><br>
-                <input type="text" id="nombre" name="nombre" required><br><br>
-            
-                <label for="email">Correo Electrónico:</label><br>
-                <input type="email" id="email" name="email" required><br><br>
-            
-                <label for="mensaje">Mensaje:</label><br>
-                <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
-                <input type="submit" value="Enviar">
-            </form>
-        </fieldset>
+<!-- Formulario de Contacto -->
+<div class="form-container">
+    <form class="form-container-item" action="" method="">
+      <fieldset>
+        <legend>Formulario de Contacto</legend>
+
+        <label for="first-name">Nombre:</label>
+        <input type="text" id="first-name" name="first-name" placeholder="Tu nombre"
+          pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ\s]+" minlength="2" maxlength="40" required>
+
+        <label for="last-name">Apellido:</label>
+        <input type="text" id="last-name" name="last-name" placeholder="Tu apellido"
+          pattern="[A-Za-zÁÉÍÓÚÑáéíóúñ\s]+" minlength="2" maxlength="40" required>
+
+        <label for="age">Edad:</label>
+        <input type="number" id="age" name="age" min="12" max="50" required>
+
+        <label for="mail">Email:</label>
+        <input type="email" id="mail" name="mail" placeholder="Ej: ejemplo@correo.com..." required>
+
+        <label for="provincia">Provincia:</label>
+        <input list="provincias" id="provincia" name="provincia"
+          pattern="Buenos Aires|Catamarca|Chaco|Chubut|Córdoba|Corrientes|Entre Ríos|Formosa|Jujuy|La Pampa|La Rioja|Mendoza|Misiones|Neuquén|Río Negro|Salta|San Juan|San Luis|Santa Cruz|Santa Fe|Santiago del Estero|Tierra del Fuego|Tucumán"
+          placeholder="Ej: Córdoba" required>
+
+        <datalist id="provincias">
+          <option value="Buenos Aires">
+          <option value="Catamarca">
+          <option value="Chaco">
+          <option value="Chubut">
+          <option value="Córdoba">
+          <option value="Corrientes">
+          <option value="Entre Ríos">
+          <option value="Formosa">
+          <option value="Jujuy">
+          <option value="La Pampa">
+          <option value="La Rioja">
+          <option value="Mendoza">
+          <option value="Misiones">
+          <option value="Neuquén">
+          <option value="Río Negro">
+          <option value="Salta">
+          <option value="San Juan">
+          <option value="San Luis">
+          <option value="Santa Cruz">
+          <option value="Santa Fe">
+          <option value="Santiago del Estero">
+          <option value="Tierra del Fuego">
+          <option value="Tucumán">
+        </datalist>
+
+        <label for="tipoConsulta">Tipo de consulta:</label>
+        <select id="tipoConsulta" name="tipoConsulta" required>
+          <option value="">-- Seleccioná un tipo --</option>
+          <option value="general">Consulta general</option>
+          <option value="tecnica">Consulta técnica</option>
+          <option value="ventas">Revisión de datos</option>
+          <option value="reclamos">Reclamos</option>
+        </select>
+        <label for="consulta">Consulta:</label>
+        <textarea name="consulta" id="consulta" placeholder="Escribir consulta"></textarea>
+        <label class="terminos-check">
+          <input class="input-check" name="terminos" type="checkbox" id="terminos" required>
+          Aceptar los <a href="#">términos y condiciones</a>
+        </label>
+        <button type="submit" id="enviar" disabled>Enviar</button>
+      </fieldset>
+    </form>
+  </div>
         <footer>© 2025 Cultura de Jujuy. Todos los derechos reservados.
             <hr>
             <a class="botonfooter" href="#top"><img src="static/images/flecha.png" width="50px"></a>
         </footer>
+        <script>
+            const checkbox = document.getElementById('terminos');
+            const boton = document.getElementById('enviar');
+      
+            checkbox.addEventListener('change', () => {
+              boton.disabled = !checkbox.checked;
+            });
+          </script>
 </body>
 </html>

@@ -165,3 +165,104 @@ footer {
 .flechasCarrousel img{
     width: 25px;
 }
+
+/*Formulario: estilos*/
+
+.form-container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #f8f8f8;
+    border-radius: 32px;
+    box-shadow: 0 14px 22px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+  }
+  
+  .form-container fieldset {
+    border-color: green;
+    border-width: 2px;
+    padding: 0 20px;
+  
+    legend {
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+  }
+  
+  
+  form label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  form input[type="text"],
+  form input[type="number"],
+  form input[type="email"],
+  form input[list],
+  form select,
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1rem;
+  }
+  
+  form textarea {
+    resize: none;
+    min-height: 80px;
+    /* Browser Chrome, Edge, Opera, Safari */
+    form-sizing: content;
+  }
+  
+  form input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  form a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+  
+  form a:hover {
+    text-decoration: underline;
+  }
+  
+  button {
+    height: auto;
+    margin: 10px auto;
+    display: block;
+  }
+  
+  button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #0077cc;
+    color: white;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover:not(:disabled) {
+    background-color: #005fa3;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .terminos-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+  }
