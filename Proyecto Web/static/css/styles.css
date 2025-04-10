@@ -104,31 +104,64 @@ footer {
     margin-top: 50px/* Empuja el footer hacia abajo */
 
 }
-#conteItems{
-    height: 200px;
+/*Carrousel museos*/
+.conteItems{
+    height: 400px;
+    width: 80%;
     overflow: hidden;
-    border: 10px solid black;
+    align-items:center;
 
 }
+
 .itemCarrousel{
-    height: 200px;
-    position: relative;
-}
-.targetaCarrousel{
+    position:relative;
+    width: 100%;
     height: 100%;
-    margin: 0px;
-    
+    background-color: violet;
+    border: 5px solid olive;
+    border-radius: 15px;
 }
-.flechasCarrousel{
-    position: absolute;
+.targetaCarrousel {
+    background-color: darkgreen;
+    margin: 20px;
+    padding: 10px;
+    border: 5px solid olive;
+    border-radius: 15px;
+    margin-bottom: 50%;
+}
+.targetaCarrousel img{
+    width:100%;
+    height: auto;
+    object-fit: cover;
+}
+#linkMuseos{
+    text-decoration: none;
+    color: black;
+    position:relative;
+    top: 5px;
+    text-align: center;
+    font-size: larger;
+}
+.targetaCarrousel strong{
+    text-align: center;
+    color: black;
+}
+#item2 img{
+    height:100%;
+}
+#museo2 img{
+    height: 350px;
+}
+.flechasCarrousel {
+    position:absolute;
     top: 0;
     display: flex;
+    height: 100%;
+    width: 100%;
     align-items: center;
     justify-content: space-between;
-    padding:20px;
+    padding: 20px;
 }
-
-#linkmuseos{
-    height: 100%;
-
+.flechasCarrousel img{
+    width: 25px;
 }
