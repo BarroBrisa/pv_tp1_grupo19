@@ -1,35 +1,233 @@
-.hero_container {
+/* Estilos para el carrusel del hero */
+.hero-carousel {
+  position: relative;
   width: 100%;
-  height: 450px;
-  background-color: orangered;
+  height: 480px;
+  margin-top: 13px;
+  overflow: hidden; /* Esta propiedad ya estaba, es crucial */
+  background-color: #D4A373;
+}
+
+/* Ocultar los radio buttons */
+.hero-carousel input {
+  display: none;
+}
+
+/* Track del carrusel */
+.hero-track {
+  width: 400%; /* 100% por cada slide (tenemos 4) */
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+/* Cada slide individual */
+.hero-slide {
+  width: 25%; /* Un cuarto del total para que se vea uno a la vez */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 140px;
+  gap: 20px;
+}
+
+/* Imagen dentro del slide */
+.hero-slide img {
+  height: auto;
+  width: 500px;
+  border-radius: 1rem;
+  box-shadow: 0px 4px 10px rgba(38, 70, 83, 0.5); /* Sombra con el color neutro */
+}
+
+/* Contenido de texto */
+.hero-content {
+  text-align: center;
+  padding-left: 130px;
+  padding-right: 100px;
+  font-size: 20px;
+}
+
+.hero-content h2 {
+  color: #E63946; /* Color de énfasis - Rojo Vibrante */
+  text-shadow: 1px 1px 5px rgba(38, 70, 83, 0.3); /* Sombra con el color neutro */
+  margin-bottom: 15px;
+  font-size: 2.5rem;
+}
+
+.hero-content p {
+  color: #264653; /* Color neutro - Gris Oscuro */
+  line-height: 1.6;
+}
+
+/* Control de navegación con los radio buttons */
+#slide1:checked ~ .hero-track {
+  transform: translateX(0);
+}
+
+#slide2:checked ~ .hero-track {
+  transform: translateX(-25%);
+}
+
+#slide3:checked ~ .hero-track {
+  transform: translateX(-50%);
+}
+
+#slide4:checked ~ .hero-track {
+  transform: translateX(-75%);
+}
+
+/* Botones de navegación (flechas) */
+.hero-navigation {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 2;
+}
+
+.hero-nav-arrow {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(69, 123, 157, 0.7); /* Color de contraste - Azul Andino */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.hero-nav-arrow:hover {
+  background-color: rgba(69, 123, 157, 1); /* Color de contraste - Azul Andino */
+  transform: scale(1.1);
+}
+
+/* Indicadores de posición (puntos) */
+.hero-indicators {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
-  justify-content: start;
-  padding-left: 140px;
+  gap: 10px;
+}
 
-  img {
-    height: auto;
-    width: 500px;
-    border-radius: 1rem;
-    box-shadow: 0px 4px 10px black;
+.hero-indicator {
+  width: 12px;
+  height: 12px;
+  background-color: rgba(244, 162, 97, 0.6); /* Color secundario - Arena Dorada */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.hero-indicator:hover {
+  background-color: rgba(244, 162, 97, 1); /* Color secundario - Arena Dorada */
+  transform: scale(1.2);
+}
+
+/* Indicador activo */
+#slide1:checked ~ .hero-indicators label:nth-child(1),
+#slide2:checked ~ .hero-indicators label:nth-child(2),
+#slide3:checked ~ .hero-indicators label:nth-child(3),
+#slide4:checked ~ .hero-indicators label:nth-child(4) {
+  background-color: #E63946; /* Color de énfasis - Rojo Vibrante */
+  transform: scale(1.2);
+}
+
+/* Lógica para los botones de navegación */
+/* Para cada slide, configuramos qué etiquetas apuntan al slide anterior y siguiente */
+#slide1:checked ~ .hero-navigation .prev {
+  display: none; /* Ocultar en el primer slide */
+}
+
+#slide1:checked ~ .hero-navigation .next {
+  display: flex;
+}
+
+#slide2:checked ~ .hero-navigation .prev {
+  display: flex;
+}
+
+#slide2:checked ~ .hero-navigation .next {
+  display: flex;
+}
+
+#slide3:checked ~ .hero-navigation .prev {
+  display: flex;
+}
+
+#slide3:checked ~ .hero-navigation .next {
+  display: flex;
+}
+
+#slide4:checked ~ .hero-navigation .prev {
+  display: flex;
+}
+
+#slide4:checked ~ .hero-navigation .next {
+  display: none; /* Ocultar en el último slide */
+}
+
+/* Al hacer clic en el primer slide, el botón prev debe apuntar al último slide */
+#slide1:checked ~ .hero-navigation .prev {
+  display: flex;
+}
+
+#slide1:checked ~ .hero-navigation .prev {
+  cursor: pointer;
+}
+
+
+
+/* Reglas de responsividad para el carrusel */
+@media (max-width: 1200px) {
+  .hero-slide {
+    padding-left: 80px;
   }
+  
+  .hero-content {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  
+  .hero-slide img {
+    width: 400px;
+  }
+}
 
-  div {
-    text-align: center;
-    padding-left: 130px;
-    padding-right: 100px;
-    font-size: 20px;
+@media (max-width: 900px) {
+  .hero-carousel {
+    height: auto;
+    min-height: 600px;
+  }
+  
+  .hero-slide {
+    flex-direction: column;
+    padding: 40px 20px;
+    justify-content: center;
+  }
+  
+  .hero-content {
+    padding: 20px 20px 40px;
+  }
+}
 
-    h2 {
-      color: greenyellow;
-      text-shadow: 0px 4px 10px black;
-    }
-
-    p {
-      color: lightgray;
-      opacity: 0.7;
-    }
+@media (max-width: 600px) {
+  .hero-slide img {
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  .hero-content h2 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-content p {
+    font-size: 16px;
   }
 }
