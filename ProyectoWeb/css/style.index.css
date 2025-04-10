@@ -3,9 +3,9 @@
   position: relative;
   width: 100%;
   height: 480px;
-  margin-top: 13px;
   overflow: hidden;
-  background-color: #D4A373; /* Color base - Terracota Suave */
+  background-color: #D4A373;
+  /* Color base - Terracota Suave */
 }
 
 /* Ocultar los radio buttons */
@@ -15,22 +15,26 @@
 
 /* Track del carrusel - IMPORTANTE: Eliminado el display: flex que causaba el problema de ancho */
 .hero-track {
-  width: 400%; /* 100% por cada slide (tenemos 4) */
+  width: 400%;
+  /* 100% por cada slide (tenemos 4) */
   transition: transform 0.5s ease-in-out;
   height: 100%;
   position: relative;
-  display: block; /* Cambiado a block para evitar problemas de anchura */
+  display: block;
+  /* Cambiado a block para evitar problemas de anchura */
 }
 
 /* Cada slide individual */
 .hero-slide {
-  width: 25%; /* Un cuarto del total para que se vea uno a la vez */
+  width: 25%;
+  /* Un cuarto del total para que se vea uno a la vez */
   height: 100%;
   display: flex;
   align-items: center;
   padding-left: 140px;
   gap: 20px;
-  float: left; /* En lugar de usar flex, usamos float para posicionar los slides */
+  float: left;
+  /* En lugar de usar flex, usamos float para posicionar los slides */
 }
 
 /* Imagen dentro del slide */
@@ -38,7 +42,8 @@
   height: auto;
   width: 500px;
   border-radius: 1rem;
-  box-shadow: 0px 4px 10px rgba(38, 70, 83, 0.5); /* Sombra con el color neutro */
+  box-shadow: 0px 4px 10px rgba(38, 70, 83, 0.5);
+  /* Sombra con el color neutro */
 }
 
 /* Contenido de texto */
@@ -50,31 +55,34 @@
 }
 
 .hero-content h2 {
-  color: #E63946; /* Color de énfasis - Rojo Vibrante */
-  text-shadow: 1px 1px 5px rgba(38, 70, 83, 0.3); /* Sombra con el color neutro */
+  color: #E63946;
+  /* Color de énfasis - Rojo Vibrante */
+  text-shadow: 1px 1px 5px rgba(38, 70, 83, 0.3);
+  /* Sombra con el color neutro */
   margin-bottom: 15px;
   font-size: 2.5rem;
 }
 
 .hero-content p {
-  color: #264653; /* Color neutro - Gris Oscuro */
+  color: #264653;
+  /* Color neutro - Gris Oscuro */
   line-height: 1.6;
 }
 
 /* Control de navegación con los radio buttons */
-#slide1:checked ~ .hero-track {
+#slide1:checked~.hero-track {
   transform: translateX(0);
 }
 
-#slide2:checked ~ .hero-track {
+#slide2:checked~.hero-track {
   transform: translateX(-25%);
 }
 
-#slide3:checked ~ .hero-track {
+#slide3:checked~.hero-track {
   transform: translateX(-50%);
 }
 
-#slide4:checked ~ .hero-track {
+#slide4:checked~.hero-track {
   transform: translateX(-75%);
 }
 
@@ -89,17 +97,18 @@
 
 /* Conjunto de flechas para cada slide */
 .arrow-set {
-  display: none; /* Ocultos por defecto */
+  display: none;
+  /* Ocultos por defecto */
   justify-content: space-between;
   padding: 0 20px;
   width: 100%;
 }
 
 /* Mostrar solo el conjunto de flechas correspondiente al slide activo */
-#slide1:checked ~ .hero-navigation .slide1-arrows,
-#slide2:checked ~ .hero-navigation .slide2-arrows,
-#slide3:checked ~ .hero-navigation .slide3-arrows,
-#slide4:checked ~ .hero-navigation .slide4-arrows {
+#slide1:checked~.hero-navigation .slide1-arrows,
+#slide2:checked~.hero-navigation .slide2-arrows,
+#slide3:checked~.hero-navigation .slide3-arrows,
+#slide4:checked~.hero-navigation .slide4-arrows {
   display: flex;
 }
 
@@ -107,7 +116,8 @@
 .hero-nav-arrow {
   width: 50px;
   height: 50px;
-  background-color: rgba(69, 123, 157, 0.7); /* Color de contraste - Azul Andino */
+  background-color: rgba(69, 123, 157, 0.7);
+  /* Color de contraste - Azul Andino */
   color: white;
   border-radius: 50%;
   display: flex;
@@ -119,7 +129,8 @@
 }
 
 .hero-nav-arrow:hover {
-  background-color: rgba(69, 123, 157, 1); /* Color de contraste - Azul Andino */
+  background-color: rgba(69, 123, 157, 1);
+  /* Color de contraste - Azul Andino */
   transform: scale(1.1);
 }
 
@@ -136,23 +147,26 @@
 .hero-indicator {
   width: 12px;
   height: 12px;
-  background-color: rgba(244, 162, 97, 0.6); /* Color secundario - Arena Dorada */
+  background-color: gray;
+  /* Color secundario - Arena Dorada */
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
 }
 
 .hero-indicator:hover {
-  background-color: rgba(244, 162, 97, 1); /* Color secundario - Arena Dorada */
+  background-color: black;
+  /* Color secundario - Arena Dorada */
   transform: scale(1.2);
 }
 
 /* Indicador activo */
-#slide1:checked ~ .hero-indicators label:nth-child(1),
-#slide2:checked ~ .hero-indicators label:nth-child(2),
-#slide3:checked ~ .hero-indicators label:nth-child(3),
-#slide4:checked ~ .hero-indicators label:nth-child(4) {
-  background-color: #E63946; /* Color de énfasis - Rojo Vibrante */
+#slide1:checked~.hero-indicators label:nth-child(1),
+#slide2:checked~.hero-indicators label:nth-child(2),
+#slide3:checked~.hero-indicators label:nth-child(3),
+#slide4:checked~.hero-indicators label:nth-child(4) {
+  background-color: #E63946;
+  /* Color de énfasis - Rojo Vibrante */
   transform: scale(1.2);
 }
 
@@ -161,12 +175,12 @@
   .hero-slide {
     padding-left: 80px;
   }
-  
+
   .hero-content {
     padding-left: 60px;
     padding-right: 60px;
   }
-  
+
   .hero-slide img {
     width: 400px;
   }
@@ -177,13 +191,13 @@
     height: auto;
     min-height: 600px;
   }
-  
+
   .hero-slide {
     flex-direction: column;
     padding: 40px 20px;
     justify-content: center;
   }
-  
+
   .hero-content {
     padding: 20px 20px 40px;
   }
@@ -194,11 +208,11 @@
     width: 100%;
     max-width: 350px;
   }
-  
+
   .hero-content h2 {
     font-size: 1.8rem;
   }
-  
+
   .hero-content p {
     font-size: 16px;
   }
