@@ -9,6 +9,9 @@
   <link href="css/style.index.css" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="public/favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
 </head>
 
 <body>
@@ -16,7 +19,7 @@
     <header class="header_container">
       <div class="header_container_logo">
       </div>
-      <h1>Cultura de Jujuy</h1>
+      <h1 class="header_container_title">Cultura de Jujuy</h1>
       <nav class="nav_container">
         <ul class="nav_container_item">
           <li><a href="index.html">Inicio</a></li>
@@ -69,7 +72,7 @@
         
         <!-- Slide 4: Artesanías -->
         <div class="hero-slide">
-          <img src="public/images/artesania-jujuy.jpg" alt="Artesanías tradicionales">
+          <img src="public/images/artesania-jujuy.webp" alt="Artesanías tradicionales">
           <div class="hero-content">
             <h2>Artesanías Ancestrales</h2>
             <p>Los tejidos, la cerámica y la orfebrería jujeña representan siglos de sabiduría transmitida entre generaciones. Cada pieza cuenta historias y simbolismos de la cosmovisión andina a través de sus colores y diseños.</p>
@@ -77,10 +80,32 @@
         </div>
       </div>
       
-      <!-- Navegación con flechas -->
+      <!-- Navegación con flechas - CORREGIDA -->
       <div class="hero-navigation">
-        <label for="slide4" class="hero-nav-arrow prev">❮</label>
-        <label for="slide2" class="hero-nav-arrow next">❯</label>
+        <!-- Para cada slide, configuramos específicamente qué flecha va a qué slide -->
+        <!-- Slide 1 navigation -->
+        <div class="arrow-set slide1-arrows">
+          <label for="slide4" class="hero-nav-arrow prev">❮</label>
+          <label for="slide2" class="hero-nav-arrow next">❯</label>
+        </div>
+        
+        <!-- Slide 2 navigation -->
+        <div class="arrow-set slide2-arrows">
+          <label for="slide1" class="hero-nav-arrow prev">❮</label>
+          <label for="slide3" class="hero-nav-arrow next">❯</label>
+        </div>
+        
+        <!-- Slide 3 navigation -->
+        <div class="arrow-set slide3-arrows">
+          <label for="slide2" class="hero-nav-arrow prev">❮</label>
+          <label for="slide4" class="hero-nav-arrow next">❯</label>
+        </div>
+        
+        <!-- Slide 4 navigation -->
+        <div class="arrow-set slide4-arrows">
+          <label for="slide3" class="hero-nav-arrow prev">❮</label>
+          <label for="slide1" class="hero-nav-arrow next">❯</label>
+        </div>
       </div>
       
       <!-- Indicadores de posición -->
@@ -107,7 +132,7 @@
     </div>
 
     <div class="footer__logo">
-      <p class="footer__brand">Cultura de Jujuy</p>
+      <div class="footer__brand">Cultura de Jujuy</div>
       <small>Copyright (c) 2025 Author. All Rights Reserved.</small>
     </div>
 

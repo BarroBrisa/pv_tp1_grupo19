@@ -4,8 +4,8 @@
   width: 100%;
   height: 480px;
   margin-top: 13px;
-  overflow: hidden; /* Esta propiedad ya estaba, es crucial */
-  background-color: #D4A373;
+  overflow: hidden;
+  background-color: #D4A373; /* Color base - Terracota Suave */
 }
 
 /* Ocultar los radio buttons */
@@ -13,11 +13,13 @@
   display: none;
 }
 
-/* Track del carrusel */
+/* Track del carrusel - IMPORTANTE: Eliminado el display: flex que causaba el problema de ancho */
 .hero-track {
   width: 400%; /* 100% por cada slide (tenemos 4) */
   transition: transform 0.5s ease-in-out;
   height: 100%;
+  position: relative;
+  display: block; /* Cambiado a block para evitar problemas de anchura */
 }
 
 /* Cada slide individual */
@@ -28,6 +30,7 @@
   align-items: center;
   padding-left: 140px;
   gap: 20px;
+  float: left; /* En lugar de usar flex, usamos float para posicionar los slides */
 }
 
 /* Imagen dentro del slide */
@@ -75,18 +78,32 @@
   transform: translateX(-75%);
 }
 
-/* Botones de navegación (flechas) */
+/* Navegación por flechas - REESCRITO COMPLETAMENTE */
 .hero-navigation {
   position: absolute;
   top: 50%;
   width: 100%;
   transform: translateY(-50%);
-  display: flex;
-  justify-content: space-between;
-  padding: 0 20px;
   z-index: 2;
 }
 
+/* Conjunto de flechas para cada slide */
+.arrow-set {
+  display: none; /* Ocultos por defecto */
+  justify-content: space-between;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* Mostrar solo el conjunto de flechas correspondiente al slide activo */
+#slide1:checked ~ .hero-navigation .slide1-arrows,
+#slide2:checked ~ .hero-navigation .slide2-arrows,
+#slide3:checked ~ .hero-navigation .slide3-arrows,
+#slide4:checked ~ .hero-navigation .slide4-arrows {
+  display: flex;
+}
+
+/* Estilos para las flechas */
 .hero-nav-arrow {
   width: 50px;
   height: 50px;
@@ -138,51 +155,6 @@
   background-color: #E63946; /* Color de énfasis - Rojo Vibrante */
   transform: scale(1.2);
 }
-
-/* Lógica para los botones de navegación */
-/* Para cada slide, configuramos qué etiquetas apuntan al slide anterior y siguiente */
-#slide1:checked ~ .hero-navigation .prev {
-  display: none; /* Ocultar en el primer slide */
-}
-
-#slide1:checked ~ .hero-navigation .next {
-  display: flex;
-}
-
-#slide2:checked ~ .hero-navigation .prev {
-  display: flex;
-}
-
-#slide2:checked ~ .hero-navigation .next {
-  display: flex;
-}
-
-#slide3:checked ~ .hero-navigation .prev {
-  display: flex;
-}
-
-#slide3:checked ~ .hero-navigation .next {
-  display: flex;
-}
-
-#slide4:checked ~ .hero-navigation .prev {
-  display: flex;
-}
-
-#slide4:checked ~ .hero-navigation .next {
-  display: none; /* Ocultar en el último slide */
-}
-
-/* Al hacer clic en el primer slide, el botón prev debe apuntar al último slide */
-#slide1:checked ~ .hero-navigation .prev {
-  display: flex;
-}
-
-#slide1:checked ~ .hero-navigation .prev {
-  cursor: pointer;
-}
-
-
 
 /* Reglas de responsividad para el carrusel */
 @media (max-width: 1200px) {
