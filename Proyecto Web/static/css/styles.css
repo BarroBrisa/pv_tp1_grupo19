@@ -42,9 +42,18 @@ h1{
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.2s;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+
+}
+.menu1 a:hover{
+  background-color: yellow;
+  color: red;
+}
+nav >h1:hover, h1:link{
+  background-color: yellow;
+  color: red;
 }
 .sect{
-    background-color: lightgreen;
+    background-color:green;
     display: flexbox;
     align-items: center;  
     margin: 10px 100px;
@@ -66,29 +75,39 @@ h1{
     border-radius: 5px;
     transition: background-color 0.3s, transform 0.2s;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-
-
 }
 #texttitulo {
     text-align: center;
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
+    background-color: green;
+    color: whitesmoke;
+}
+div{
+  border: 2px solid orange;
+  border-radius: 5px;
+}
+div > h2{
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ p {
+  font-size: 20px;
+  margin: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+table{
+  border: 2px solid greenyellow;
+  position:relative;
+  width: 100%;
 }
 
-
-.fondform{
-    background-image: url(../images/fonfoform.jpeg);
-    background-position: center;tr4
-    width: 5px;
-    
-}
-
-p{
-    font-size: 25px;
-}
 article{
     background-color: lightblue;
     display:flexbox;
     text-align: center;
-    border-style:solid;
+    border: 2px solid whitesmoke;
+    border-radius: 5px;
 }
 hr{
     border: none;
@@ -167,7 +186,6 @@ footer {
 }
 
 /*Formulario: estilos*/
-
 .form-container {
     max-width: 600px;
     margin: 40px auto;
