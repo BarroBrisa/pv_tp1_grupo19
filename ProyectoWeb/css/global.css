@@ -26,9 +26,10 @@
   align-items: center;
   height: clamp(70px, 15vw, 160px);
 
-  h1 {
-    color: var(--font-color);
-  }
+
+}
+h1 {
+  color: var(--font-color);
 }
 
 .header_container_title {
