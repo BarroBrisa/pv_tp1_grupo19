@@ -24,8 +24,7 @@
             </li>       
         </ul>
     </nav>
-    <section
-        class="sect">
+    <section class="sect">
         <div id="intro"> 
             <h2>Hola mundo!! Jujuy es una de las 23 provincias de Argentina </h2>
             <h2>Geografía:</h2>
@@ -33,76 +32,85 @@
                     al sur y este con la provincia de salta, conocida por su rica cultura
                     indígena y su diversidad geográfica lo que la convierta en una de las 
                     provincias más bonitas y pintorezcas de Argentina.<br>
-                    Jujuy se divide en 4 grandes regiones:
+                    Jujuy se divide en 4 grandes regiones: Puna, Quebrada, Valles y Yungas.
                 </p>
-            <table>
-                <tr>
-                    Regiones de Jujuy
-                    <td>
-                        <strong>Puna</strong><br>
-                        <img src="static/images/puna.jpg" width="300px" alt="Región de Puna">
-                    </td>
-                    <td>
-                        <strong>Quebrada</strong><br>
-                        <img src="static/images/quebrada.jpg" width="250px" alt="Región de Quebrada">
-                    </td>
-                    <td>
-                        <strong>Valles</strong><br>
-                        <img src="static/images/valles.jpg" width="350px" alt="Región de Valles">
-                    </td>
-                    <td>
-                        <strong>Yungas</strong><br>
-                        <img src="static/images/yungas.jpg" width="300px" alt="Región de Yungas">
-                    </td>
-                </tr>
-            </table>
+
+                <div class="carrusel">
+                    <div class="carrusel-imagenes">
+                        <img src="static/images/puna.jpg" width="100%" height="250px"  alt="Región de Puna">
+                        <img src="static/images/quebrada.jpg" width="100%" height="250px" alt="Región de Quebrada">
+                        <img src="static/images/valles.jpg" width="100%" height="250px"  alt="Región de Valles">
+                    <img src="static/images/yungas.jpg" width="100%" height="250px"  alt="Región de Yungas">
+                    </div>
+                    <button class="prev" onclick="moveSlide(-1)">❮</button>
+                    <button class="next" onclick="moveSlide(1)">❯</button>
+                </div>
+                <script>
+                    let slideIndex = 0;
+                    showSlide(slideIndex); // Inicializa el carrusel mostrando la primera imagen
+                
+                    function moveSlide(n) {
+                        showSlide(slideIndex += n); // Mueve la imagen de acuerdo con el valor n
+                    }
+                
+                    function showSlide(n) {
+                        const slides = document.querySelectorAll(".carrusel-imagenes img");
+                        if (n >= slides.length) { slideIndex = 0; } // Si el índice es mayor que la cantidad de imágenes, vuelve a la primera
+                        if (n < 0) { slideIndex = slides.length - 1; } // Si el índice es menor que 0, va a la última imagen
+                        for (let i = 0; i < slides.length; i++) {
+                            slides[i].style.display = "none";  
+                        }
+                        slides[slideIndex].style.display = "block"; // Muestra la imagen actual
+                    }
+                </script>
+        </div>
         </div>
         <article>
-        <h2>Cultura</h2>
-        <p>Jujuy cuenta con un rico patrimonio cultural siendo la provincia más andina de la Argentina.
-            Tal así que <strong>La Quebrada de Humahuaca</strong> fue declarada <em>Patrimonio Natural y cultural de la Humanidad</em>
-            por la UNESCO en el año 2003
-        </p>
-        <h3>Carnaval</h3>
-        <p>
-            El festejo se inicia en cada comunidad con el desentierro del diablo, llamado Coludo o Pujllay, que simboliza la celebración,
-            de una apachetan 1 de piedras, representado por un muñeco de trapo que fue enterrado en el final del último carnaval.
-            Los deseos reprimidos se liberan y durante el festejo se permite embriagarse sin recato, los preceptos morales son dejados de lado.
-            la iglesia católica se ha visto obligada con el correr del tiempo a participar de los festejos “paganos”.
-            Hay baile y música interpretada con instrumentos autóctonos como los erkenchos, las anatas, los charangos y bombos.
-            Los habitantes se visten con trajes coloridos utilizando cascabeles y máscaras para disfrazarse; se divierten impregnándose la cara con harina y
-            tirándose con talco y serpentinas mientras reparten ramitas de albahaca.
-            La tradición tiene reminiscencias indígenas, españolas y criollas. Además, por ser la Quebrada de Humahuaca paso obligado hacia el Perú y Bolivia,
-            ha asimilado la música y algunas características de esos países.
-            Los dos jueves anteriores al carnaval las comadres se reúnen para celebrar el reencuentro, y al jueves siguiente llega el turno de los compadres, quienes se
-            entretienen en divertidas copleadas relatando lo que les ocurrió a lo largo del año. El sábado de carnaval se juntan las comparsas.
-            Dura ocho días: con el sol las comparsas concurren a las invitaciones, bailando carnavalitos por las calles, y a la noche se baila en los locales.
-            El festejo termina el “Domingo de Tentación”, con el “entierro” del Diablo, en un hoyo que representa la boca de la Pachamama, junto a cigarrillos, coca,
-            serpentinas y chicha. Se prueban entonces platos típicos como empanadas, corderos, queso de cabra y bebiendo, entre otras cosas, chicha y entre lamentos 
-            se reza para que haya nuevamente diversión al año siguiente.
-        </p>
-        <h3>Pachamama</h3>
-        <p>
-            Todos los 1ro de agosto se celebra el Día de la Pachamama que quiere decir en quechua Madre Tierra
-            (pacha: universo, mundo , tiempo ,lugar) y mama:(madre) que es una diosa totémica de los Incas representado por el planeta Tierra,
-            a la que se le realizan ofrendas dentro de un hoyo cavado en la tierra para darle de comer.
-            En el se depositan, comida, alcohol, cigarrillos, chicha, hojas de coca, etc.
-            Las celebraciones se realizan durante todo el mes de agosto.
-        </p>
-        <h3>Éxodo Jujeño</h3>
-        <p>Uno de los hechos históricos más importantes de Jujuy:
-            Todos los 23 de agosto se conmemora el primer éxodo Jujeño, cuando en 1812 bajo las órdenes del general Manuel Belgrano
-            , los jujeños debieron abandonar sus hogares hacía Tucumán, quemando sus campos, viviendas y dejando la tierra arrasada para dificultar 
-            el asentamiento a los invasores. Ésta estrategia militar le permitió a Belgrano y su ejército derrotar a los realistas en la 
-            Batalla de Tucumán, recuperaron el control sobre esa parte del territorio y pudieron obtener la segunda victoria en la Batalla de Salta.
-            Fue uno de los mayores sacrificios de la población civil en aras de la libertad. 
-        </p>
-        <h3>Fiesta Nacional de los Estudiantes</h3>
-        <p>
-            Cuando inicia la primavera el 21 de Septiembre, Jujuy se convierte en la capital nacional de la juventud y la primavera.
-            Ésta fiesta convoca a todos los estudiantes a festejar su juventud y alegría dónde cada colegio elige a su reina y 
-            construye una carroza alegórica.
-        </p>
+            <h2>Cultura</h2>
+            <p>Jujuy cuenta con un rico patrimonio cultural siendo la provincia más andina de la Argentina.
+                Tal así que <strong>La Quebrada de Humahuaca</strong> fue declarada <em>Patrimonio Natural y cultural de la Humanidad</em>
+                por la UNESCO en el año 2003
+            </p>
+            <h3>Carnaval</h3>
+            <p>
+                El festejo se inicia en cada comunidad con el desentierro del diablo, llamado Coludo o Pujllay, que simboliza la celebración,
+                de una apachetan 1 de piedras, representado por un muñeco de trapo que fue enterrado en el final del último carnaval.
+                Los deseos reprimidos se liberan y durante el festejo se permite embriagarse sin recato, los preceptos morales son dejados de lado.
+                la iglesia católica se ha visto obligada con el correr del tiempo a participar de los festejos “paganos”.
+                Hay baile y música interpretada con instrumentos autóctonos como los erkenchos, las anatas, los charangos y bombos.
+                Los habitantes se visten con trajes coloridos utilizando cascabeles y máscaras para disfrazarse; se divierten impregnándose la cara con harina y
+                tirándose con talco y serpentinas mientras reparten ramitas de albahaca.
+                La tradición tiene reminiscencias indígenas, españolas y criollas. Además, por ser la Quebrada de Humahuaca paso obligado hacia el Perú y Bolivia,
+                ha asimilado la música y algunas características de esos países.
+                Los dos jueves anteriores al carnaval las comadres se reúnen para celebrar el reencuentro, y al jueves siguiente llega el turno de los compadres, quienes se
+                entretienen en divertidas copleadas relatando lo que les ocurrió a lo largo del año. El sábado de carnaval se juntan las comparsas.
+                Dura ocho días: con el sol las comparsas concurren a las invitaciones, bailando carnavalitos por las calles, y a la noche se baila en los locales.
+                El festejo termina el “Domingo de Tentación”, con el “entierro” del Diablo, en un hoyo que representa la boca de la Pachamama, junto a cigarrillos, coca,
+                serpentinas y chicha. Se prueban entonces platos típicos como empanadas, corderos, queso de cabra y bebiendo, entre otras cosas, chicha y entre lamentos 
+                se reza para que haya nuevamente diversión al año siguiente.
+            </p>
+            <h3>Pachamama</h3>
+            <p>
+                Todos los 1ro de agosto se celebra el Día de la Pachamama que quiere decir en quechua Madre Tierra
+                (pacha: universo, mundo , tiempo ,lugar) y mama:(madre) que es una diosa totémica de los Incas representado por el planeta Tierra,
+                a la que se le realizan ofrendas dentro de un hoyo cavado en la tierra para darle de comer.
+                En el se depositan, comida, alcohol, cigarrillos, chicha, hojas de coca, etc.
+                Las celebraciones se realizan durante todo el mes de agosto.
+            </p>
+            <h3>Éxodo Jujeño</h3>
+            <p>Uno de los hechos históricos más importantes de Jujuy:
+                Todos los 23 de agosto se conmemora el primer éxodo Jujeño, cuando en 1812 bajo las órdenes del general Manuel Belgrano
+                , los jujeños debieron abandonar sus hogares hacía Tucumán, quemando sus campos, viviendas y dejando la tierra arrasada para dificultar 
+                el asentamiento a los invasores. Ésta estrategia militar le permitió a Belgrano y su ejército derrotar a los realistas en la 
+                Batalla de Tucumán, recuperaron el control sobre esa parte del territorio y pudieron obtener la segunda victoria en la Batalla de Salta.
+                Fue uno de los mayores sacrificios de la población civil en aras de la libertad. 
+            </p>
+            <h3>Fiesta Nacional de los Estudiantes</h3>
+            <p>
+                Cuando inicia la primavera el 21 de Septiembre, Jujuy se convierte en la capital nacional de la juventud y la primavera.
+                Ésta fiesta convoca a todos los estudiantes a festejar su juventud y alegría dónde cada colegio elige a su reina y 
+                construye una carroza alegórica.
+            </p>
          </article>
     </section>
     <footer>© 2025 Cultura de Jujuy. Todos los derechos reservados.

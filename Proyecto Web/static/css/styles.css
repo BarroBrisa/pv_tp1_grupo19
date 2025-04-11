@@ -58,6 +58,8 @@ nav >h1:hover, h1:link{
     align-items: center;  
     margin: 10px 100px;
     border-style:solid;
+    border: 5px solid orange;
+    border-radius: 5px;
 }
 #linkMuseos{
     display: flexbox;
@@ -83,10 +85,7 @@ nav >h1:hover, h1:link{
     background-color: green;
     color: whitesmoke;
 }
-div{
-  border: 2px solid orange;
-  border-radius: 5px;
-}
+
 div > h2{
   text-align: center;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -96,17 +95,50 @@ div > h2{
   margin: 10px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-table{
-  border: 2px solid greenyellow;
-  position:relative;
-  width: 100%;
+/*Carrusel index*/
+.carrusel {
+  position: relative;
+  max-width: 600px; /* Puedes ajustar el tamaño del carrusel */
+  margin: auto;
+  overflow: hidden; /* Oculta las imágenes que salen del contenedor */
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+.carrusel-imagenes img {
+  max-width: 100%;
+  display: block; /* Hace que las imágenes se comporten como bloques */
+}
+
+div > button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.6);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+.prev {
+  left: 10px; /* Posición del botón izquierdo */
+}
+
+.next {
+  right: 10px; /* Posición del botón derecho */
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.9); /* Cambia el fondo al pasar el ratón */
 }
 
 article{
     background-color: lightblue;
     display:flexbox;
     text-align: center;
-    border: 2px solid whitesmoke;
+    border: 5px solid whitesmoke;
     border-radius: 5px;
 }
 hr{
@@ -125,7 +157,7 @@ footer {
 }
 /*Carrousel museos*/
 .conteItems{
-    height: 400px;
+    height: 500px;
     width: 80%;
     overflow: hidden;
     align-items:center;
@@ -136,7 +168,7 @@ footer {
     position:relative;
     width: 100%;
     height: 100%;
-    background-color: violet;
+    background-color: green;
     border: 5px solid olive;
     border-radius: 15px;
 }
@@ -153,28 +185,58 @@ footer {
     height: auto;
     object-fit: cover;
 }
-#linkMuseos{
-    text-decoration: none;
-    color: black;
-    position:relative;
-    top: 5px;
-    text-align: center;
-    font-size: larger;
-}
+
 .targetaCarrousel strong{
     text-align: center;
     color: black;
+    font-size: 25px
 }
-#item2 img{
-    height:100%;
+.linkMuseos {
+  text-align:center;
 }
-#museo2 img{
+.linkMuseos a{
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 25px;
+  border: 2px solid red;
+}
+.linkMuseos a:hover{
+  background-color: cyan;
+  color: black;
+}
+#museo1 img{
     height: 350px;
 }
+#museo2 img{
+  height: 350px;
+}
+#museo3 img{
+  height: 350px;
+}
+#museo4 img{
+  height: 350px;
+}
+#museo5 img{
+  height: 350px;
+}
+#museo6 img{
+  height: 350px;
+}
+#museo7 img{
+  height: 350px;
+}
+#museo8 img{
+  height: 350px;
+}
+#museo9 img{
+  height: 350px;
+}
+
 .flechasCarrousel {
     position:absolute;
     top: 0;
     display: flex;
+    margin-top: 55px;
     height: 100%;
     width: 100%;
     align-items: center;
@@ -182,7 +244,7 @@ footer {
     padding: 20px;
 }
 .flechasCarrousel img{
-    width: 25px;
+    width: 35px;
 }
 
 /*Formulario: estilos*/
@@ -191,6 +253,7 @@ footer {
     margin: 40px auto;
     padding: 30px;
     background-color: #f8f8f8;
+    border: 5px solid olive;
     border-radius: 32px;
     box-shadow: 0 14px 22px rgba(0, 0, 0, 0.1);
     font-family: sans-serif;
@@ -250,7 +313,7 @@ footer {
     text-decoration: underline;
   }
   
-  button {
+  button{
     height: auto;
     margin: 10px auto;
     display: block;
