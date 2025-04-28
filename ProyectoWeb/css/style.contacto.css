@@ -12,7 +12,6 @@
   border-color: green;
   border-width: 2px;
   padding: 0 20px;
-
   legend {
     margin: 0 auto;
     padding: 0 20px;
@@ -95,4 +94,10 @@ button:disabled {
   justify-content: center;
   gap: 8px;
   cursor: pointer;
+}
+body{
+
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(../public/images/salinas-grandes.webp) center/cover no-repeat fixed;
+  background-color: #333;
+  
 }
