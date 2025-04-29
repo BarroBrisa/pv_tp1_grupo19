@@ -1,0 +1,98 @@
+/*Carrousel museos*/
+body{
+  background-color: salmon;
+}
+.conteItems{
+  height: 500px;
+  width: 100%;
+  overflow: hidden;
+  align-items:center;
+
+}
+
+.itemCarrousel{
+  position:relative;
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  border: 5px solid olive;
+  border-radius: 15px;
+}
+.targetaCarrousel {
+  background-color: darkgreen;
+  margin: 20px;
+  padding: 10px;
+  border: 5px solid olive;
+  border-radius: 15px;
+  margin-bottom: 50%;
+}
+.targetaCarrousel img{
+  width:100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.targetaCarrousel strong{
+  text-align: center;
+  color: black;
+  font-size: 25px
+}
+.linkMuseos {
+text-align:center;
+}
+.linkMuseos a{
+text-decoration: none;
+color: whitesmoke;
+font-size: 25px;
+border: 2px solid red;
+}
+.linkMuseos a:hover{
+background-color: cyan;
+color: black;
+}
+#museo1 img{
+  height: 350px;
+}
+#museo2 img{
+height: 350px;
+}
+#museo3 img{
+height: 350px;
+}
+#museo4 img{
+height: 350px;
+}
+#museo5 img{
+height: 350px;
+}
+#museo6 img{
+height: 350px;
+}
+#museo7 img{
+height: 350px;
+}
+#museo8 img{
+height: 350px;
+}
+#museo9 img{
+height: 350px;
+}
+
+.flechasCarrousel {
+  position:absolute;
+  top: 0;
+  display: flex;
+  margin-top: 55px;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+}
+.flechasCarrousel img{
+  width: 35px;
+}
+
+
+
+

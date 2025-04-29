@@ -7,7 +7,11 @@
   <title>Cultura de Jujuy</title>
   <link href="css/global.css" rel="stylesheet">
   <link href="css/style.index.css" rel="stylesheet">
-  <link rel="icon" href="public/favicon.svg" type="image/svg+xml">
+  <link rel="icon" type="image/x-icon" href="public/favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    </style>
 </head>
 
 <body>
@@ -15,7 +19,7 @@
     <header class="header_container">
       <div class="header_container_logo">
       </div>
-      <h1>Cultura de Jujuy</h1>
+      <h1 class="header_container_title">Cultura de Jujuy</h1>
       <nav class="nav_container">
         <ul class="nav_container_item">
           <li><a href="index.html">Inicio</a></li>
@@ -24,13 +28,121 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <!-- section -->
-    </main>
-    <footer>
-      <p>Copyright (c) 2025 Author. All Rights Reserved.</p>
-    </footer>
-  </div>
+
+  <!-- section -->
+  <main>
+    <!-- Hero Cultura -->
+    <section class="hero-carousel">
+      <!-- Controles de radio ocultos para manejar la navegación -->
+      <input type="radio" name="hero-slide" id="slide1" checked>
+      <input type="radio" name="hero-slide" id="slide2">
+      <input type="radio" name="hero-slide" id="slide3">
+      <input type="radio" name="hero-slide" id="slide4">
+      
+      <!-- Contenedor de slides -->
+      <div class="hero-track">
+        <!-- Slide 1: Cultura general (similar al hero actual) -->
+        <div class="hero-slide">
+          <img src="public/images/hero-img.png" alt="Paisaje cultural de Jujuy">
+          <div class="hero-content">
+            <h2>Cultura de Jujuy</h2>
+            <p>Jujuy cuenta con un rico patrimonio cultural siendo la provincia más andina de la Argentina. Tal es así que
+              La Quebrada de Humahuaca fue declarada «Patrimonio Natural y Cultural de la Humanidad» por la UNESCO en el
+              año 2003.</p>
+          </div>
+        </div>
+        
+        <!-- Slide 2: Carnavales -->
+        <div class="hero-slide">
+          <img src="public/images/carnaval-jujuy.jpg" alt="Carnaval de Jujuy">
+          <div class="hero-content">
+            <h2>Carnavales Jujeños</h2>
+            <p>Los carnavales de Jujuy son una explosión de color y tradición que mezcla rituales ancestrales con la alegría popular. El desentierro del diablo, las comparsas y los topamientos crean una experiencia única donde toda la comunidad participa.</p>
+          </div>
+        </div>
+        
+        <!-- Slide 3: Pachamama -->
+        <div class="hero-slide">
+          <img src="public/images/pachamama-jujuy.jpg" alt="Ceremonia a la Pachamama">
+          <div class="hero-content">
+            <h2>Culto a la Pachamama</h2>
+            <p>Agosto es el mes dedicado a la Madre Tierra. Las familias jujeñas realizan ceremonias con ofrendas de alimentos, bebidas y coca en agradecimiento por los frutos recibidos y para pedir prosperidad en las cosechas futuras.</p>
+          </div>
+        </div>
+        
+        <!-- Slide 4: Artesanías -->
+        <div class="hero-slide">
+          <img src="public/images/artesania-jujuy.webp" alt="Artesanías tradicionales">
+          <div class="hero-content">
+            <h2>Artesanías Ancestrales</h2>
+            <p>Los tejidos, la cerámica y la orfebrería jujeña representan siglos de sabiduría transmitida entre generaciones. Cada pieza cuenta historias y simbolismos de la cosmovisión andina a través de sus colores y diseños.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Navegación con flechas - CORREGIDA -->
+      <div class="hero-navigation">
+        <!-- Para cada slide, configuramos específicamente qué flecha va a qué slide -->
+        <!-- Slide 1 navigation -->
+        <div class="arrow-set slide1-arrows">
+          <label for="slide4" class="hero-nav-arrow prev">❮</label>
+          <label for="slide2" class="hero-nav-arrow next">❯</label>
+        </div>
+        
+        <!-- Slide 2 navigation -->
+        <div class="arrow-set slide2-arrows">
+          <label for="slide1" class="hero-nav-arrow prev">❮</label>
+          <label for="slide3" class="hero-nav-arrow next">❯</label>
+        </div>
+        
+        <!-- Slide 3 navigation -->
+        <div class="arrow-set slide3-arrows">
+          <label for="slide2" class="hero-nav-arrow prev">❮</label>
+          <label for="slide4" class="hero-nav-arrow next">❯</label>
+        </div>
+        
+        <!-- Slide 4 navigation -->
+        <div class="arrow-set slide4-arrows">
+          <label for="slide3" class="hero-nav-arrow prev">❮</label>
+          <label for="slide1" class="hero-nav-arrow next">❯</label>
+        </div>
+      </div>
+      
+      <!-- Indicadores de posición -->
+      <div class="hero-indicators">
+        <label for="slide1" class="hero-indicator"></label>
+        <label for="slide2" class="hero-indicator"></label>
+        <label for="slide3" class="hero-indicator"></label>
+        <label for="slide4" class="hero-indicator"></label>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__social">
+      <hr class="footer__line" />
+      <div class="footer__icons">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+      <hr class="footer__line" />
+    </div>
+
+    <div class="footer__logo">
+      <div class="footer__brand">Cultura de Jujuy</div>
+      <small>Copyright (c) 2025 Author. All Rights Reserved.</small>
+    </div>
+
+    <div class="footer__links">
+      <a href="#">Información legal</a>
+      <span>|</span>
+      <a href="#">Política de privacidad</a>
+    </div>
+  </footer>
+</div>
 </body>
 
 </html>
