@@ -2,22 +2,26 @@
   max-width: 600px;
   margin: 40px auto;
   padding: 30px;
-  background-color: #f8f8f8;
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 32px;
-  box-shadow: 0 14px 22px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   font-family: sans-serif;
 }
 
 .form-container fieldset {
-  border-color: green;
+  border-color: rgba(255, 255, 255, 0.5);
   border-width: 2px;
   padding: 0 20px;
-  legend {
-    margin: 0 auto;
-    padding: 0 20px;
-  }
 }
 
+.form-container fieldset legend {
+  margin: 0 auto;
+  padding: 0 20px;
+  color: #fff;
+}
 
 form label {
   display: block;
@@ -95,9 +99,9 @@ button:disabled {
   gap: 8px;
   cursor: pointer;
 }
-body{
-
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(../public/images/salinas-grandes.webp) center/cover no-repeat fixed;
+body {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../public/images/salinas-grandes.webp) center/cover no-repeat fixed;
   background-color: #333;
-  
 }
